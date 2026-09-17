@@ -1,0 +1,6 @@
+# Site generator sources — not part of the deployed static site
+build/
+__pycache__/
+
+# Duplicate GitHub Pages copy of the site
+docs/
