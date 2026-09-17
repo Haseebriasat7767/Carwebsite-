@@ -14,11 +14,23 @@ import pages
 import templates
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.environ.get("GC_OUT", ROOT)                       # output root (docs/ for Pages builds)
+BASE = os.environ.get("GC_BASE", "").rstrip("/")           # URL prefix, e.g. /Carwebsite-
 TODAY = date.today().isoformat()
 
 
+def _rebase(html):
+    """Prefix root-relative href/src with BASE so the site serves from a subpath."""
+    if not BASE:
+        return html
+    import re as _re
+    return _re.sub(r'(href|src)="/', lambda m: m.group(1) + '="' + BASE + '/', html)
+
+
 def write(rel_path, content):
-    full = os.path.join(ROOT, rel_path.lstrip("/"))
+    if rel_path.endswith(".html"):
+        content = _rebase(content)
+    full = os.path.join(OUT, rel_path.lstrip("/"))
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w", encoding="utf-8") as fh:
         fh.write(content)
@@ -117,6 +129,9 @@ def build():
     write("/sitemap.xml", sitemap())
     write("/robots.txt", robots())
     write("/humans.txt", humans())
+    if OUT != ROOT:
+        with open(os.path.join(OUT, ".nojekyll"), "w") as fh:
+            fh.write("")
 
     return made
 
@@ -154,6 +169,6 @@ Generated: %s
 
 if __name__ == "__main__":
     files = build()
-    total = sum(os.path.getsize(os.path.join(ROOT, f.lstrip("/"))) for f in files)
+    total = sum(os.path.getsize(os.path.join(OUT, f.lstrip("/"))) for f in files)
     print("Generated %d HTML pages (%.1f KB of HTML)" % (len(files), total / 1024))
     print("Plus sitemap.xml, robots.txt, humans.txt")
