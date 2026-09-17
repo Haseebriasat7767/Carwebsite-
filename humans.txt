@@ -1,0 +1,13 @@
+GearCraft Auto Works — static website
+---------------------------------
+Built as a hand-written static site: no framework, no CMS, no third-party theme.
+
+  * HTML rendered by a small Python generator (build/build.py)
+  * One original stylesheet   -> assets/css/styles.css
+  * One original script file  -> assets/js/main.js
+  * Original artwork          -> assets/img (AI-generated for this project)
+
+All written copy on this site was composed for this build.
+Contact details in build/data_site.py are placeholders — replace before going live.
+
+Generated: 2026-09-17 09:23
