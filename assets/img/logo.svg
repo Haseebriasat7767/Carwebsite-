@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Car Garage Auto Service logo">
+  <defs>
+    <linearGradient id="cgas" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="52%" stop-color="#ff8a1e"/>
+      <stop offset="100%" stop-color="#e05304"/>
+    </linearGradient>
+  </defs>
+  <!-- garage doorway arch -->
+  <path d="M6.5 22.6A17.5 17.5 0 0 1 41.5 22.6V42.4H6.5z" fill="#0e1620" stroke="url(#cgas)" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- roller-door slats -->
+  <g stroke="url(#cgas)" stroke-width="1.7" stroke-linecap="round" opacity=".55">
+    <path d="M13 17.6h22"/><path d="M10.2 22.4h27.6"/>
+  </g>
+  <!-- road line -->
+  <path d="M10.5 41.2h27" stroke="url(#cgas)" stroke-width="1.3" stroke-linecap="round" opacity=".38"/>
+  <!-- car silhouette -->
+  <path d="M11.4 36.6v-2.3c0-.9.6-1.7 1.5-2l2.2-.6 2.6-3.6a3 3 0 0 1 2.4-1.2h7.4a3 3 0 0 1 2.4 1.2l2.6 3.6 2.2.7c.9.3 1.5 1 1.5 1.9v2.3z" fill="#fff"/>
+  <path d="M18.6 28.9h10.4" stroke="#0e1620" stroke-width="1.5" stroke-linecap="round" opacity=".55"/>
+  <g>
+    <circle cx="17.4" cy="37.4" r="2.9" fill="url(#cgas)"/><circle cx="17.4" cy="37.4" r="1.1" fill="#0e1620"/>
+    <circle cx="30.6" cy="37.4" r="2.9" fill="url(#cgas)"/><circle cx="30.6" cy="37.4" r="1.1" fill="#0e1620"/>
+  </g>
+</svg>
