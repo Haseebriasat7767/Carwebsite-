@@ -104,7 +104,7 @@ CORE_SERVICES = [
         },
         "faqs": [
             ("Where exactly is the garage?",
-             "We are in Al Quoz Industrial Area 3, a few minutes from Sheikh Zayed Road and easily reached from Business Bay, Downtown, Al Barsha, Jumeirah and the Marina corridor. Send a message and we will share a pin for the entrance."),
+             "We are in Al Quoz Industrial Area 1 on First Al Khail Street, a few minutes from Sheikh Zayed Road and easily reached from Business Bay, Downtown, Al Barsha, Jumeirah and the Marina corridor. Message us and we will send a pin for the entrance — we are open 24 hours."),
             ("Do I need an appointment?",
              "Walk-ins are welcome, but booked cars are prioritised. If you call ahead we can usually reserve a bay and tell you how long the job is likely to take."),
             ("Can I wait at the workshop?",

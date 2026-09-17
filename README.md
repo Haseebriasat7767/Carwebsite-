@@ -45,26 +45,31 @@ python3 build/build.py
 | `build/pages.py` | Home page and all hub/static pages |
 | `build/build.py` | Writes every page, plus `sitemap.xml`, `robots.txt`, `humans.txt` |
 
-## Before going live — placeholders to replace
+## Live contact details
 
-All contact details are **placeholders**. They live in one place: `build/data_site.py`.
+These are wired into every page (header, footer, floating buttons, `tel:` and `wa.me`
+links, contact page, JSON-LD and sitemap). They live in one place: `build/data_site.py`.
 
 ```python
-"phone":        "+971 50 000 0000",
-"tel":          "+971500000000",     # used for tel: links
-"whatsapp":     "971500000000",      # used for wa.me links (international format, no +)
-"email":        "workshop@gearcraft-auto.example",
-"address_street": "Warehouse 14, Street 8, Al Quoz Industrial Area 3",
-"domain":       "https://www.example-gearcraft.ae",   # used for canonical URLs + sitemap
+"phone":          "+971 54 701 4902",
+"tel":            "+971547014902",
+"whatsapp":       "971547014902",
+"email":          "bhassan525@gmail.com",
+"address_street": "Al Quoz Industrial Area 1, First Al Khail Street, Street 5b",
+"plus_code":      "46WP+F5 Dubai",
+"hours":          "Open 24 hours, every day of the week",
+"open24":         True,                                  # drives the "Open 24 hours" indicator
+"map_url":        "https://maps.app.goo.gl/hMSWjm3rKgJsc4Zp9",
 ```
 
-Then re-run `python3 build/build.py`. Also swap:
+Still placeholders — change when ready:
 
-- `brand`, `brand_short`, `tagline`, `founded_year`, `license_note`
-- The map links in `build/pages.py` (currently generic Google Maps searches for
-  "Al Quoz Industrial Area 3, Dubai") — point them at your real listing, or drop in an
-  embedded map iframe inside `.map-frame`.
+- `"domain"` (used for canonical URLs and `sitemap.xml`); set it to your live domain.
+- `"brand"` / `"brand_html"` — rename the whole site from this one key.
 - Social profile links in `footer()` inside `build/render.py` (currently `#`).
+- `founded_year`, `license_note`, and the stats in `STATS` — set them to your real figures.
+
+After any edit, re-run `python3 build/build.py`.
 
 ## Forms
 

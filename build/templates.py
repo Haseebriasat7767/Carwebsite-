@@ -625,11 +625,12 @@ def local_business_ld():
         "telephone": SITE["tel"], "email": SITE["email"], "url": DOMAIN,
         "address": {"@type": "PostalAddress", "streetAddress": SITE["address_street"],
                     "addressLocality": "Dubai", "addressCountry": "AE"},
-        "geo": {"@type": "GeoCoordinates", "latitude": 25.1305, "longitude": 55.2248},
+        "geo": {"@type": "GeoCoordinates", "latitude": 25.1461, "longitude": 55.2354},
+        "hasMap": SITE.get("map_url", ""),
         "openingHoursSpecification": [{
-            "@type": "OpeningHoursSpecification", "dayOfWeek":
-            ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
-            "opens": "08:00", "closes": "22:00"}],
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00", "closes": "23:59"}],
         "priceRange": "AED",
         "areaServed": {"@type": "City", "name": "Dubai"},
     })

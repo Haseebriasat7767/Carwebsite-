@@ -378,7 +378,7 @@ def modules_hub():
 
 def areas_hub():
     body = [section("Where we work",
-                    "Our workshop is in Al Quoz Industrial Area 3, minutes from Sheikh Zayed Road. Mobile technicians and recovery units cover the whole emirate around the clock.",
+                    "Our workshop is in Al Quoz Industrial Area 1 on First Al Khail Street, minutes from Sheikh Zayed Road and open 24 hours. Mobile technicians and recovery units cover the whole emirate around the clock.",
                     '<div class="grid g-3">%s</div>' % "".join(
                         '<article class="card reveal"><div class="card-icon">%s</div>'
                         '<h3><a href="/areas-we-serve/%s/">%s</a></h3><p>%s</p>'
@@ -390,7 +390,7 @@ def areas_hub():
                         '<div class="map-frame"><div class="map-static"><div>%s<strong>%s</strong>%s<br>'
                         '<a class="btn btn-sm" style="margin-top:14px" href="%s" target="_blank" rel="noopener">%s Get directions</a></div></div></div>'
                         % (icon("pin"), esc(SITE["address_street"]), esc(SITE["address_city"]),
-                           "https://www.google.com/maps/search/?api=1&amp;query=" + SITE["map_query"].replace(" ", "+"),
+                           SITE["map_url"],
                            "Open in Maps", ), alt=True, centered=True))
     body.append(stats_band())
     body.append(estimate_form("Book in your area"))
@@ -525,10 +525,10 @@ def contact_page():
         '<span class="ir-value">%s</span></span></div>'
         '<div class="info-row">%s<span><span class="ir-label">Getting here</span>'
         '<span class="ir-value muted small">A few minutes from Sheikh Zayed Road, with easy access from Business Bay, Al Barsha, '
-        'Umm Suqeim and Jumeirah. Message us and we will send an entrance pin.</span></span></div>'
+        'Umm Suqeim and Jumeirah. Plus code 46WP+F5 Dubai. Message us and we will send an entrance pin.</span></span></div>'
         '<div class="btn-row" style="margin-top:20px">'
         '<a class="btn" href="%s" target="_blank" rel="noopener">%s WhatsApp</a>'
-        '<a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%s" target="_blank" rel="noopener">%s Directions</a>'
+        '<a class="btn btn-ghost" href="%s" target="_blank" rel="noopener">%s Directions</a>'
         '</div></div>'
     ) % (icon("pin"), esc(SITE["address_street"]), esc(SITE["address_city"]),
          icon("phone"), SITE["tel"], SITE["phone_label"], icon("whatsapp"),
@@ -536,14 +536,14 @@ def contact_page():
          icon("clock"), esc(SITE["hours"]),
          icon("recovery"), esc(SITE["roadside_hours"]),
          icon("car"), whatsapp_url(), icon("whatsapp"), icon("pin"),
-         SITE["map_query"].replace(" ", "+"))
+         SITE["map_url"])
 
     body.append('<section class="section"><div class="wrap"><div class="split" style="align-items:start">%s%s</div></div></section>' % (form, info))
     body.append(section("Find the workshop", None,
         '<div class="map-frame"><div class="map-static"><div>%s<strong>%s</strong>%s<br>'
-        '<a class="btn btn-sm" style="margin-top:14px" href="https://www.google.com/maps/search/?api=1&amp;query=%s" target="_blank" rel="noopener">%s Open in Google Maps</a>'
+        '<a class="btn btn-sm" style="margin-top:14px" href="%s" target="_blank" rel="noopener">%s Open in Google Maps</a>'
         '</div></div></div>' % (icon("pin"), esc(SITE["address_full"]), SITE["license_note"],
-                                SITE["map_query"].replace(" ", "+"), icon("pin")), alt=True, centered=True))
+                                SITE["map_url"], icon("pin")), alt=True, centered=True))
     body.append(section("Quick answers", None,
         '<div class="grid g-3">%s</div>' % cards([
             {"title": "Need a quote?", "icon": "note", "text": "Send the car details and the symptom. We reply with a realistic estimate and expected timeframe.", "href": "/faq/"},

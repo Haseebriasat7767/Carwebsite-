@@ -206,7 +206,7 @@ def header(active):
 
     html = ['<a class="skip-link" href="#main">Skip to content</a>',
             '<div class="topbar"><div class="wrap"><div class="topbar-left">',
-            '<span class="topbar-item"><span class="pulse-dot" aria-hidden="true"></span><span data-open-now>Open now · closes 10:00 PM</span></span>',
+            '<span class="topbar-item"><span class="pulse-dot" aria-hidden="true"></span><span data-open-now>Open 24 hours · staffed now</span></span>',
             '<span class="topbar-item opt-hide">%s %s</span>' % (icon("pin"), SITE["address_street"]),
             '</div><div class="topbar-right">',
             '<span class="topbar-item opt-hide">%s %s</span>' % (icon("mail"), '<a href="mailto:%s">%s</a>' % (SITE["email"], SITE["email"])),
@@ -215,8 +215,8 @@ def header(active):
             '<header class="site-header"><div class="wrap header-inner">',
             '<a class="brand" href="/" aria-label="%s home">' % SITE["brand"],
             '<span class="brand-mark">%s</span>' % logo_svg(),
-            '<span class="brand-text"><span class="brand-name">Gear<em>Craft</em></span>'
-            '<span class="brand-tag">%s</span></span></a>' % esc(SITE["tagline"]),
+            '<span class="brand-text"><span class="brand-name">%s</span>'
+            '<span class="brand-tag">%s</span></span></a>' % (SITE.get("brand_html", esc(SITE["brand"])), esc(SITE["tagline"])),
             '<nav class="main-nav" aria-label="Main navigation">',
             item("Home", "/", "home"),
             item("Services", "/services/", "services", services_dd),
@@ -247,7 +247,7 @@ def mobile_panel(active):
     return (
         '<div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">'
         '<div class="mp-head"><a class="brand" href="/"><span class="brand-mark">%s</span>'
-        '<span class="brand-text"><span class="brand-name">Gear<em>Craft</em></span>'
+        '<span class="brand-text"><span class="brand-name">%s</span>'
         '<span class="brand-tag">%s</span></span></a>'
         '<button class="mp-close" type="button" aria-label="Close menu">&times;</button></div>'
         '<div class="mp-acc">'
@@ -263,7 +263,7 @@ def mobile_panel(active):
         '<div class="mp-foot"><a class="btn btn-block" href="%s" target="_blank" rel="noopener">%s Book on WhatsApp</a>'
         '<a class="btn btn-ghost btn-block" href="tel:%s">%s Call %s</a></div>'
         '</div>'
-    ) % (logo_svg(), esc(SITE["tagline"]),
+    ) % (logo_svg(), SITE.get("brand_html", esc(SITE["brand"])), esc(SITE["tagline"]),
          links(n["services"], lambda s: "/services/%s/" % s["slug"]),
          links(n["roadside"], lambda s: "/roadside-assistance/%s/" % s["slug"]),
          links(n["brands"], lambda b: "/car-brands/%s/" % b["slug"]) + links(n["marques"], lambda m: "/car-brands/%s/" % m["slug"]),
@@ -316,7 +316,7 @@ def footer():
         '<div class="footer-grid">'
         '<div class="footer-col footer-about">'
         '<a class="brand" href="/"><span class="brand-mark">%s</span>'
-        '<span class="brand-text"><span class="brand-name">Gear<em>Craft</em></span>'
+        '<span class="brand-text"><span class="brand-name">%s</span>'
         '<span class="brand-tag">%s</span></span></a>'
         '<p>An independent workshop in Al Quoz handling mechanical repair, diagnostics, air conditioning, '
         'brakes, tyres, bodywork and 24-hour roadside recovery for every make of car in Dubai.</p>'
@@ -338,7 +338,7 @@ def footer():
         '<a href="/about/">About</a><a href="/reviews/">Reviews</a><a href="/faq/">FAQ</a>'
         '<a href="/contact/">Contact</a><a href="/blog/">Guides</a><a href="/sitemap.xml">Sitemap</a>'
         '</nav></div></div></footer>'
-        % (logo_svg(), esc(SITE["tagline"]),
+        % (logo_svg(), SITE.get("brand_html", esc(SITE["brand"])), esc(SITE["tagline"]),
            icon("pin"), SITE["address_street"], SITE["address_city"],
            icon("phone"), SITE["tel"], SITE["phone_label"],
            icon("mail"), SITE["email"], SITE["email"],

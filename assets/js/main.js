@@ -204,7 +204,14 @@
   var openNow = doc.querySelectorAll("[data-open-now]");
   if (openNow.length) {
     function tick() {
-      // Gulf Standard Time = UTC+4, workshop hours 08:00–22:00 daily
+      // Gulf Standard Time = UTC+4. If SITE.open24 is set the workshop never closes.
+      if (SITE.open24) {
+        openNow.forEach(function (el) {
+          el.textContent = "Open 24 hours · staffed now";
+          el.classList.remove("is-closed");
+        });
+        return;
+      }
       var now = new Date();
       var gst = new Date(now.getTime() + (now.getTimezoneOffset() + 240) * 60000);
       var h = gst.getHours();
