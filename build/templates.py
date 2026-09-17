@@ -219,7 +219,8 @@ def cta_band(title=None, text=None, phone_label="Speak to a technician now"):
 
 
 def stats_band():
-    items = []
+    # NOTE: figures below are PLACEHOLDER content in build/data_site.py (STATS).
+    items = ['<!-- PLACEHOLDER: replace the STATS figures in build/data_site.py with your real numbers before publishing -->']
     for s in STATS:
         items.append('<div class="stat"><div class="stat-num" data-count="%s" data-suffix="%s"%s>0</div>'
                      '<div class="stat-label">%s</div></div>'
@@ -249,7 +250,8 @@ def related_services(slugs, title="Related services"):
 
 
 def testimonial_slider():
-    slides = []
+    # NOTE: reviews below are PLACEHOLDER examples in build/data_site.py (TESTIMONIALS).
+    slides = ['<!-- PLACEHOLDER: replace TESTIMONIALS in build/data_site.py with genuine customer reviews before publishing -->']
     for t in TESTIMONIALS:
         initials = "".join(w[0] for w in t["name"].split()[:2]).upper()
         stars = "".join(icon("star") for _ in range(5))

@@ -216,7 +216,7 @@ def header(active):
             '<a class="brand" href="/" aria-label="%s home">' % SITE["brand"],
             '<span class="brand-mark">%s</span>' % logo_svg(),
             '<span class="brand-text"><span class="brand-name">%s</span>'
-            '<span class="brand-tag">%s</span></span></a>' % (SITE.get("brand_html", esc(SITE["brand"])), esc(SITE["tagline"])),
+            '<span class="brand-tag">%s</span></span></a>' % (SITE.get("brand_html", esc(SITE["brand"])), SITE.get("brand_tag", esc(SITE["tagline"]))),
             '<nav class="main-nav" aria-label="Main navigation">',
             item("Home", "/", "home"),
             item("Services", "/services/", "services", services_dd),
@@ -263,7 +263,7 @@ def mobile_panel(active):
         '<div class="mp-foot"><a class="btn btn-block" href="%s" target="_blank" rel="noopener">%s Book on WhatsApp</a>'
         '<a class="btn btn-ghost btn-block" href="tel:%s">%s Call %s</a></div>'
         '</div>'
-    ) % (logo_svg(), SITE.get("brand_html", esc(SITE["brand"])), esc(SITE["tagline"]),
+    ) % (logo_svg(), SITE.get("brand_html", esc(SITE["brand"])), SITE.get("brand_tag", esc(SITE["tagline"])),
          links(n["services"], lambda s: "/services/%s/" % s["slug"]),
          links(n["roadside"], lambda s: "/roadside-assistance/%s/" % s["slug"]),
          links(n["brands"], lambda b: "/car-brands/%s/" % b["slug"]) + links(n["marques"], lambda m: "/car-brands/%s/" % m["slug"]),
@@ -272,21 +272,23 @@ def mobile_panel(active):
 
 
 def logo_svg():
+    """Original mark: a garage doorway arch with a car silhouette inside it."""
     return ('<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">'
-            '<defs><linearGradient id="gcl" x1="0" y1="0" x2="1" y2="1">'
-            '<stop offset="0%" stop-color="#ffc44d"/><stop offset="55%" stop-color="#ff8a1e"/>'
-            '<stop offset="100%" stop-color="#e85d04"/></linearGradient></defs>'
-            '<path d="M24 2.6 42.4 13.2v21.6L24 45.4 5.6 34.8V13.2z" fill="#0f1620" stroke="url(#gcl)" stroke-width="2.1"/>'
-            '<g fill="url(#gcl)" opacity=".92">'
-            '<path d="M24 9.4a14.6 14.6 0 0 1 3.9.5l-.7 3.3a11.3 11.3 0 0 0-6.4 0l-.7-3.3a14.6 14.6 0 0 1 3.9-.5z"/>'
-            '<path d="M33.6 13.7a14.6 14.6 0 0 1 2.9 2.7l-2.5 2.2a11.3 11.3 0 0 0-2.2-2.1z"/>'
-            '<path d="M14.4 13.7l1.8 2.8a11.3 11.3 0 0 0-2.2 2.1l-2.5-2.2a14.6 14.6 0 0 1 2.9-2.7z"/>'
-            '<path d="M38.6 24a14.6 14.6 0 0 1-.5 3.6l-3.3-.6a11.3 11.3 0 0 0 0-6l3.3-.6c.3 1.2.5 2.4.5 3.6z"/>'
-            '<path d="M9.4 24c0-1.2.2-2.4.5-3.6l3.3.6a11.3 11.3 0 0 0 0 6l-3.3.6a14.6 14.6 0 0 1-.5-3.6z"/>'
-            '<path d="M36.5 30.3l2.5 2.2a14.6 14.6 0 0 1-2.9 2.7l-1.8-2.8a11.3 11.3 0 0 0 2.2-2.1z"/>'
-            '<path d="M11.5 30.3a11.3 11.3 0 0 0 2.2 2.1l-1.8 2.8a14.6 14.6 0 0 1-2.9-2.7z"/>'
-            '<path d="M24 38.6c-1.3 0-2.6-.2-3.9-.5l.7-3.3a11.3 11.3 0 0 0 6.4 0l.7 3.3c-1.3.3-2.6.5-3.9.5z"/></g>'
-            '<path d="M30.4 17.1a5.9 5.9 0 0 0-7.8 7.3l-6 6a2.3 2.3 0 1 0 3.3 3.3l6-6a5.9 5.9 0 0 0 7.3-7.8l-3 3-2.6-.7-.7-2.6z" fill="#fff"/>'
+            '<defs><linearGradient id="cgas" x1="0" y1="0" x2="1" y2="1">'
+            '<stop offset="0%" stop-color="#ffd166"/><stop offset="52%" stop-color="#ff8a1e"/>'
+            '<stop offset="100%" stop-color="#e05304"/></linearGradient></defs>'
+            '<path d="M6.5 22.6A17.5 17.5 0 0 1 41.5 22.6V42.4H6.5z" fill="#0e1620" '
+            'stroke="url(#cgas)" stroke-width="2.4" stroke-linejoin="round"/>'
+            '<g stroke="url(#cgas)" stroke-width="1.7" stroke-linecap="round" opacity=".55">'
+            '<path d="M13 17.6h22"/><path d="M10.2 22.4h27.6"/></g>'
+            '<path d="M10.5 41.2h27" stroke="url(#cgas)" stroke-width="1.3" stroke-linecap="round" opacity=".38"/>'
+            '<path d="M11.4 36.6v-2.3c0-.9.6-1.7 1.5-2l2.2-.6 2.6-3.6a3 3 0 0 1 2.4-1.2h7.4a3 3 0 0 1 '
+            '2.4 1.2l2.6 3.6 2.2.7c.9.3 1.5 1 1.5 1.9v2.3z" fill="#fff"/>'
+            '<path d="M18.6 28.9h10.4" stroke="#0e1620" stroke-width="1.5" stroke-linecap="round" opacity=".55"/>'
+            '<circle cx="17.4" cy="37.4" r="2.9" fill="url(#cgas)"/>'
+            '<circle cx="17.4" cy="37.4" r="1.1" fill="#0e1620"/>'
+            '<circle cx="30.6" cy="37.4" r="2.9" fill="url(#cgas)"/>'
+            '<circle cx="30.6" cy="37.4" r="1.1" fill="#0e1620"/>'
             '</svg>')
 
 
@@ -338,7 +340,7 @@ def footer():
         '<a href="/about/">About</a><a href="/reviews/">Reviews</a><a href="/faq/">FAQ</a>'
         '<a href="/contact/">Contact</a><a href="/blog/">Guides</a><a href="/sitemap.xml">Sitemap</a>'
         '</nav></div></div></footer>'
-        % (logo_svg(), SITE.get("brand_html", esc(SITE["brand"])), esc(SITE["tagline"]),
+        % (logo_svg(), SITE.get("brand_html", esc(SITE["brand"])), SITE.get("brand_tag", esc(SITE["tagline"])),
            icon("pin"), SITE["address_street"], SITE["address_city"],
            icon("phone"), SITE["tel"], SITE["phone_label"],
            icon("mail"), SITE["email"], SITE["email"],

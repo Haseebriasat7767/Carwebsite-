@@ -435,19 +435,13 @@ def about_page():
     body.append(section("", "",
         '<div class="split reveal"><div><span class="eyebrow">About the workshop</span>'
         '<h2>An independent garage built on doing the diagnosis first</h2>'
-        '<p class="muted">GearCraft Auto Works started in %d as a two-bay workshop in Al Quoz with a simple idea: find out what is '
-        'actually wrong before recommending anything. That principle has not changed as the facility has grown into a full-service '
-        'workshop with bodyshop, alignment bay, air conditioning equipment and round-the-clock recovery crews.</p>'
-        '<p class="muted">We are independent, which means we answer to customers rather than to a manufacturer\'s parts targets. '
-        'Where a component can be repaired instead of replaced, we say so. Where a job can wait, we say that too. Where something is '
-        'genuinely urgent, we show you the evidence — measurements, fault data or photographs — rather than asking you to take our word.</p>'
-        '<p class="muted">Today our team of technicians handles everything from a battery replacement in an office car park to a full '
-        'engine rebuild, with the same documentation standards applied to both.</p>'
-        '<div class="btn-row" style="margin-top:22px"><a class="btn" href="%s" target="_blank" rel="noopener">%s Meet us on WhatsApp</a>'
+        '%s'
+        '<div class="btn-row" style="margin-top:22px"><a class="btn" href="%s" target="_blank" rel="noopener">%s Message us on WhatsApp</a>'
         '<a class="btn btn-ghost" href="/contact/">%s Visit the workshop</a></div></div>'
-        '<div class="split-media">%s<div class="badge-float">%s<span><strong>%d</strong><span>years in the trade</span></span></div></div></div>'
-        % (SITE["founded_year"], whatsapp_url(), icon("whatsapp"), icon("pin"),
-           img("team-workshop", "GearCraft Auto Works technicians"), icon("clock"), 2026 - SITE["founded_year"])))
+        '<div class="split-media">%s<div class="badge-float">%s<span><strong>24 hours</strong><span>open every day</span></span></div></div></div>'
+        % ("".join('<p class="muted">%s</p>' % esc(x) for x in SITE["about_story"]),
+           whatsapp_url(), icon("whatsapp"), icon("pin"),
+           img("team-workshop", "Car Garage Auto Service technicians"), icon("clock"))))
 
     body.append(section("What we believe", None, cards([
         {"title": "Diagnosis before parts", "icon": "diag", "text": "Replacing components until a fault disappears is expensive and unreliable. We test the circuit, measure the data and prove the cause."},
@@ -477,10 +471,10 @@ def about_page():
     body.append(cta_band("Come and see the workshop",
                          "Walk in during opening hours, meet the team and have a look at the facility. No appointment needed for a conversation."))
     path = "/about/"
-    return shell("About GearCraft Auto Works — Independent Car Repair Workshop in Dubai",
+    return shell("About Car Garage Auto Service — Independent Car Repair Workshop in Dubai",
                  "About our independent car repair workshop in Al Quoz, Dubai: our history, standards, facilities, team and how we approach diagnosis, pricing and documentation.",
                  path, "".join(body), jsonld=[local_business_ld(), breadcrumb_ld("About", path)],
-                 hero=simple_hero("About GearCraft Auto Works",
+                 hero=simple_hero("About Car Garage Auto Service",
                                   "An independent workshop in Al Quoz that diagnoses before it recommends, and quotes before it starts.",
                                   [("About", None)], eyebrow="About us", image="team-workshop"))
 
@@ -552,7 +546,7 @@ def contact_page():
         ], cols=3), tight=True))
     body.append(cta_band())
     path = "/contact/"
-    return shell("Contact GearCraft Auto Works — Car Repair Workshop in Al Quoz, Dubai",
+    return shell("Contact Car Garage Auto Service — Car Repair Workshop in Al Quoz, Dubai",
                  "Contact our car repair workshop in Al Quoz, Dubai by phone, WhatsApp or email. Workshop hours, 24/7 roadside line, address and directions.",
                  path, "".join(body), jsonld=[local_business_ld(), breadcrumb_ld("Contact", path)],
                  hero=simple_hero("Contact the Workshop",

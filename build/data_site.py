@@ -2,16 +2,18 @@
 """
 Site-wide configuration + shared blocks.
 All copy in this project is original, written for this build.
-Contact details below are PLACEHOLDERS — swap them for your real numbers/address.
+Contact details below are the live business details supplied by the owner.
 """
 
 SITE = {
-    "brand": "GearCraft Auto Works",
-    "brand_short": "GearCraft",
+    "brand": "Car Garage Auto Service",
+    "brand_short": "Car Garage",
     # Wordmark markup for the logo lockup — edit here to rename the whole site.
-    "brand_html": 'Gear<em>Craft</em>',
-    "tagline": "Car Repair & 24/7 Roadside Assistance",
-    "domain": "https://www.example-gearcraft.ae",
+    "brand_html": 'Car Garage <em>Auto Service</em>',
+    # Small caps line under the wordmark in the header and footer.
+    "brand_tag": "Al Quoz &middot; Dubai",
+    "tagline": "Car Repair & 24/7 Roadside Assistance in Al Quoz, Dubai",
+    "domain": "https://www.example-cargas.ae",   # TODO: set your live domain
     # --- live contact details ---
     "phone": "+971 54 701 4902",
     "phone_label": "+971 54 701 4902",
@@ -28,8 +30,20 @@ SITE = {
     "roadside_hours": "Workshop & recovery crews: 24 hours, every day",
     "map_url": "https://maps.app.goo.gl/hMSWjm3rKgJsc4Zp9",
     "map_query": "Al Quoz Industrial Area 1, First Al Khail Street, Dubai",
-    "founded_year": 2006,
-    "license_note": "RTA-approved workshop · Trade licence on display at reception",
+    "founded_year": 2006,          # PLACEHOLDER — set your real year, or leave the About page copy generic
+    "license_note": "RTA-approved workshop · Trade licence on display at reception",   # PLACEHOLDER — verify before publishing
+
+    # About-page story paragraphs. Edit these to describe your own workshop history.
+    "about_story": [
+        "Car Garage Auto Service is an independent workshop on First Al Khail Street in Al Quoz Industrial Area 1, "
+        "open around the clock for both workshop repairs and roadside recovery across Dubai.",
+        "We are independent, which means we answer to customers rather than to a manufacturer's parts targets. "
+        "Where a component can be repaired instead of replaced, we say so. Where a job can wait, we say that too. "
+        "Where something is genuinely urgent, we show you the evidence — measurements, fault data or photographs — "
+        "rather than asking you to take our word for it.",
+        "Our technicians handle everything from a battery replacement in an office car park to a full engine rebuild, "
+        "with the same documentation standards applied to both.",
+    ],
 }
 
 STATS = [
@@ -78,7 +92,7 @@ HOME_FAQ = [
 
 TESTIMONIALS = [
     {"name": "Rashid A.", "role": "Land Cruiser owner · Mirdif",
-     "text": "My car had been to two other garages for a rough idle and nobody could pin it down. GearCraft found a cracked intake gasket in under an hour, quoted it honestly and had it fixed the same afternoon. The follow-up call two weeks later was a nice touch."},
+     "text": "My car had been to two other garages for a rough idle and nobody could pin it down. Car Garage Auto Service found a cracked intake gasket in under an hour, quoted it honestly and had it fixed the same afternoon. The follow-up call two weeks later was a nice touch."},
     {"name": "Elena M.", "role": "Compact hatchback owner · Dubai Marina",
      "text": "My AC stopped cooling in July, which in Dubai is an emergency. They diagnosed a failed compressor, explained the options and the price difference, and did not push the most expensive one. Cabin is cold again and the bill matched the quote exactly."},
     {"name": "Daniel O.", "role": "German saloon owner · Downtown",
@@ -86,7 +100,7 @@ TESTIMONIALS = [
     {"name": "Fatima K.", "role": "Family SUV owner · JVC",
      "text": "Flat tyre on Sheikh Zayed Road at 11pm with two kids in the car. The recovery crew arrived in about 35 minutes, changed the wheel safely and stayed until we were moving. Calm, professional and genuinely kind."},
     {"name": "Imran S.", "role": "Delivery van fleet · Al Quoz",
-     "text": "We keep six vans on the road and GearCraft handles the lot. Scheduled servicing, brake work, tyres, and they understand that a van off the road costs us money. Paperwork is clean and turnaround is dependable."},
+     "text": "We keep six vans on the road and Car Garage Auto Service handles the lot. Scheduled servicing, brake work, tyres, and they understand that a van off the road costs us money. Paperwork is clean and turnaround is dependable."},
     {"name": "Sophie B.", "role": "Convertible owner · Palm Jumeirah",
      "text": "Bought a used car and had them do a pre-purchase inspection first. They found previous accident repair that the seller had not mentioned, which saved me from a bad deal. Clear written report with photos."},
 ]

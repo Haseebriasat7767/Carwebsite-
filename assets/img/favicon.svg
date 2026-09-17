@@ -1,10 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="f" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ffc44d"/><stop offset="100%" stop-color="#e85d04"/>
+    <linearGradient id="cgf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd166"/><stop offset="52%" stop-color="#ff8a1e"/><stop offset="100%" stop-color="#e05304"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#0f1620"/>
-  <path d="M32 8.5 52 20v24L32 55.5 12 44V20z" fill="none" stroke="url(#f)" stroke-width="3"/>
-  <path d="M40 22.5a8 8 0 0 0-10.5 9.8l-8 8a3 3 0 1 0 4.3 4.3l8-8A8 8 0 0 0 43.6 26l-4 4-3.5-.9-.9-3.5z" fill="#fff"/>
+  <rect width="64" height="64" rx="15" fill="#0e1620"/>
+  <path d="M10 31.5A22 22 0 0 1 54 31.5V55H10z" fill="#131c27" stroke="url(#cgf)" stroke-width="3.2" stroke-linejoin="round"/>
+  <g stroke="url(#cgf)" stroke-width="2.2" stroke-linecap="round" opacity=".55">
+    <path d="M18.5 25h27"/><path d="M14.8 30.6h34.4"/>
+  </g>
+  <path d="M16.6 47.4v-3c0-1.2.8-2.2 2-2.6l2.8-.8 3.3-4.5a3.8 3.8 0 0 1 3-1.5h9.4a3.8 3.8 0 0 1 3 1.5l3.3 4.5 2.8.8c1.1.4 1.9 1.4 1.9 2.6v3z" fill="#fff"/>
+  <circle cx="24.4" cy="48.6" r="3.6" fill="url(#cgf)"/><circle cx="24.4" cy="48.6" r="1.4" fill="#131c27"/>
+  <circle cx="40.6" cy="48.6" r="3.6" fill="url(#cgf)"/><circle cx="40.6" cy="48.6" r="1.4" fill="#131c27"/>
 </svg>

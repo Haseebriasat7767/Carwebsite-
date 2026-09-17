@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GearCraft Auto Works — original stylesheet
+   Car Garage Auto Service — original stylesheet
    Author: built from scratch for this project. No third-party theme assets.
    ========================================================================== */
 
@@ -163,12 +163,17 @@ p:last-child { margin-bottom: 0; }
 
 .brand { display: inline-flex; align-items: center; gap: 11px; flex: none; }
 .brand-mark { width: 40px; height: 40px; flex: none; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.08; min-width: 0; }
 .brand-name {
-  font-family: var(--font-head); font-weight: 800; font-size: 1.12rem; letter-spacing: -.01em;
+  font-family: var(--font-head); font-weight: 800; letter-spacing: -.012em; white-space: nowrap;
+  font-size: clamp(.92rem, 1.35vw, 1.08rem);
 }
-.brand-name em { font-style: normal; color: var(--accent); }
-.brand-tag { font-size: .63rem; letter-spacing: .19em; text-transform: uppercase; color: var(--muted); }
+.brand-name em { font-style: normal; color: var(--accent); font-weight: 700; }
+.brand-tag {
+  font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
+  margin-top: 2px; white-space: nowrap;
+}
+.site-footer .brand-name, .mobile-panel .brand-name { font-size: 1.02rem; }
 
 .main-nav { margin-left: auto; display: flex; align-items: center; gap: 4px; }
 .nav-item { position: relative; }

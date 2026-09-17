@@ -15,7 +15,7 @@ BRAND_GROUPS = [
         "tradition": "Japanese",
         "h1": "Japanese Car Repair & Servicing in Dubai",
         "lede": "Toyota, Nissan, Honda, Mazda, Mitsubishi, Lexus and Subaru — reliable by design, and still needing the right maintenance for Gulf conditions.",
-        "title": "Japanese Car Repair in Dubai | GearCraft Auto Works",
+        "title": "Japanese Car Repair in Dubai | Car Garage Auto Service",
         "meta": "Japanese car repair in Dubai for Toyota, Lexus, Nissan, Honda, Mazda, Mitsubishi and Subaru. Servicing, diagnostics, AC, brakes, gearboxes and 24/7 recovery.",
         "img": "hero-workshop",
         "points": [
@@ -34,7 +34,7 @@ BRAND_GROUPS = [
         "tradition": "German",
         "h1": "German Car Repair & Servicing in Dubai",
         "lede": "BMW, Mercedes-Benz, Audi, Volkswagen and Porsche — engineering that rewards correct maintenance and punishes shortcuts.",
-        "title": "German Car Repair in Dubai | GearCraft Auto Works",
+        "title": "German Car Repair in Dubai | Car Garage Auto Service",
         "meta": "German car repair in Dubai: BMW, Mercedes-Benz, Audi, Volkswagen and Porsche servicing, diagnostics, coding, gearbox and air suspension repair.",
         "img": "diagnostics",
         "points": [
@@ -53,7 +53,7 @@ BRAND_GROUPS = [
         "tradition": "European",
         "h1": "European Car Repair & Servicing in Dubai",
         "lede": "Every European marque sold in the Gulf, covered by technicians who know the fault patterns and the correct repair procedures for each.",
-        "title": "European Car Repair in Dubai | GearCraft Auto Works",
+        "title": "European Car Repair in Dubai | Car Garage Auto Service",
         "meta": "European car repair in Dubai covering German, British, French, Italian and Swedish marques. Diagnostics, servicing, gearbox, suspension, AC and electrical work.",
         "img": "engine-repair",
         "points": [
@@ -72,7 +72,7 @@ BRAND_GROUPS = [
         "tradition": "British",
         "h1": "British Car Repair & Servicing in Dubai",
         "lede": "Land Rover, Range Rover, Jaguar, MINI and Bentley — air suspension, terrain systems and electronics handled by people who work on them weekly.",
-        "title": "British Car Repair in Dubai | GearCraft Auto Works",
+        "title": "British Car Repair in Dubai | Car Garage Auto Service",
         "meta": "British car repair in Dubai: Land Rover, Range Rover, Jaguar, MINI and Bentley servicing, air suspension repair, diagnostics, cooling and electrical faults.",
         "img": "suspension",
         "points": [
@@ -91,7 +91,7 @@ BRAND_GROUPS = [
         "tradition": "American",
         "h1": "American Car Repair & Servicing in Dubai",
         "lede": "Ford, Chevrolet, GMC, Cadillac, Dodge, Jeep and Chrysler — big V8s, pickups and SUVs maintained for heat, dust and heavy loads.",
-        "title": "American Car Repair in Dubai | GearCraft Auto Works",
+        "title": "American Car Repair in Dubai | Car Garage Auto Service",
         "meta": "American car repair in Dubai: Ford, Chevrolet, GMC, Cadillac, Dodge and Jeep servicing, cooling system repair, transmission work, brakes and diagnostics.",
         "img": "engine-repair",
         "points": [
@@ -110,7 +110,7 @@ BRAND_GROUPS = [
         "tradition": "French",
         "h1": "French Car Repair & Servicing in Dubai",
         "lede": "Renault, Peugeot, Citroen and DS — comfort-focused electronics, diesel systems and gearbox quirks diagnosed by people who know them.",
-        "title": "French Car Repair in Dubai | GearCraft Auto Works",
+        "title": "French Car Repair in Dubai | Car Garage Auto Service",
         "meta": "French car repair in Dubai: Renault, Peugeot, Citroen and DS servicing, diagnostics, automatic gearbox repair, electrical faults and air conditioning.",
         "img": "diagnostics",
         "points": [
@@ -129,7 +129,7 @@ BRAND_GROUPS = [
         "tradition": "Italian",
         "h1": "Italian Car Repair & Servicing in Dubai",
         "lede": "Fiat, Alfa Romeo, Maserati and performance marques — precise mechanical work and careful diagnostics for cars that deserve better than guesswork.",
-        "title": "Italian Car Repair in Dubai | GearCraft Auto Works",
+        "title": "Italian Car Repair in Dubai | Car Garage Auto Service",
         "meta": "Italian car repair in Dubai: Fiat, Alfa Romeo, Maserati and performance vehicles. Engine, gearbox, cooling, electrical and specialist diagnostics.",
         "img": "engine-repair",
         "points": [
@@ -148,7 +148,7 @@ BRAND_GROUPS = [
         "tradition": "Chinese",
         "h1": "Chinese Car Repair & Servicing in Dubai",
         "lede": "Geely, MG, BYD, Changan, Haval, Chery and Hongqi — fast-growing marques supported with correct diagnostics, parts sourcing and honest advice.",
-        "title": "Chinese Car Repair in Dubai | GearCraft Auto Works",
+        "title": "Chinese Car Repair in Dubai | Car Garage Auto Service",
         "meta": "Chinese car repair in Dubai: Geely, MG, BYD, Changan, Haval, Chery and Hongqi servicing, diagnostics, EV and hybrid support, parts sourcing.",
         "img": "hero-workshop",
         "points": [
@@ -167,7 +167,7 @@ BRAND_GROUPS = [
         "tradition": "Exotic and luxury",
         "h1": "Exotic & Luxury Car Repair in Dubai",
         "lede": "Careful, documented maintenance for high-value vehicles — correct procedures, clean working practices and honest advice about what is and is not our scope.",
-        "title": "Exotic & Luxury Car Repair in Dubai | GearCraft Auto Works",
+        "title": "Exotic & Luxury Car Repair in Dubai | Car Garage Auto Service",
         "meta": "Exotic and luxury car repair in Dubai: Porsche, Bentley, Maserati and high-value vehicles. Servicing, diagnostics, brakes, cooling and careful handling.",
         "img": "bodywork-paint",
         "points": [
@@ -186,7 +186,7 @@ BRAND_GROUPS = [
         "tradition": "Classic and vintage",
         "h1": "Classic & Vintage Car Repair in Dubai",
         "lede": "Recommissioning, mechanical repair and careful maintenance for collector cars that have been stored, imported or driven sparingly.",
-        "title": "Classic Car Repair in Dubai | GearCraft Auto Works",
+        "title": "Classic Car Repair in Dubai | Car Garage Auto Service",
         "meta": "Classic and vintage car repair in Dubai: recommissioning stored vehicles, carburettor work, brake and electrical restoration, cooling upgrades.",
         "img": "bodywork-paint",
         "points": [

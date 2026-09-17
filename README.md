@@ -1,8 +1,13 @@
-# GearCraft Auto Works — static website
+# Car Garage Auto Service — static website
 
-A complete, dependency-free multi-page website for a Dubai car repair workshop and
-24/7 roadside assistance business: **125 HTML pages**, one original stylesheet, one
-original script file, and original artwork.
+A complete, dependency-free multi-page website for **Car Garage Auto Service**, a car
+repair workshop and 24/7 roadside assistance business in Al Quoz, Dubai:
+**125 HTML pages**, one original stylesheet, one original script file, and original artwork.
+
+**Brand & logo.** The wordmark, the logo (a garage doorway arch with a car silhouette
+inside it, drawn from scratch as inline SVG) and the favicon are original to this
+project. Rename the whole site by editing `brand`, `brand_html` and `brand_tag` in
+`build/data_site.py`, then rebuilding.
 
 > **About the source brief.** The site was built to mirror the *structure* of an
 > existing car-garage website — same page architecture, same service catalogue, same
@@ -64,10 +69,17 @@ links, contact page, JSON-LD and sitemap). They live in one place: `build/data_s
 
 Still placeholders — change when ready:
 
-- `"domain"` (used for canonical URLs and `sitemap.xml`); set it to your live domain.
-- `"brand"` / `"brand_html"` — rename the whole site from this one key.
+- `"domain"` — currently `example-cargas.ae`; set it to your live domain so canonical
+  URLs and `sitemap.xml` are correct for SEO.
+- `"founded_year"`, `"license_note"` and `"about_story"` — make these match your real
+  business history and paperwork.
+- `"STATS"` (years in trade, vehicles serviced, rating, staff count) — replace with your
+  real figures. The generated pages carry an HTML comment marking this block.
+- `"TESTIMONIALS"` — these are **example** reviews written for the design. Replace them
+  with genuine customer reviews before publishing; fabricated reviews on a live business
+  site are misleading and can breach consumer-protection rules. Also marked with an HTML
+  comment in the output.
 - Social profile links in `footer()` inside `build/render.py` (currently `#`).
-- `founded_year`, `license_note`, and the stats in `STATS` — set them to your real figures.
 
 After any edit, re-run `python3 build/build.py`.
 

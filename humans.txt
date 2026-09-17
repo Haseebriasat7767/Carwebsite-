@@ -1,4 +1,4 @@
-GearCraft Auto Works — static website
+Car Garage Auto Service — static website
 ---------------------------------
 Built as a hand-written static site: no framework, no CMS, no third-party theme.
 
@@ -10,4 +10,4 @@ Built as a hand-written static site: no framework, no CMS, no third-party theme.
 All written copy on this site was composed for this build.
 Contact details in build/data_site.py are placeholders — replace before going live.
 
-Generated: 2026-09-17 09:36
+Generated: 2026-09-17 09:43

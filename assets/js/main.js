@@ -1,4 +1,4 @@
-/* GearCraft Auto Works — original front-end behaviour (no frameworks) */
+/* Car Garage Auto Service — original front-end behaviour (no frameworks) */
 (function () {
   "use strict";
 
@@ -140,7 +140,7 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var d = new FormData(form);
-      var lines = ["Service estimate request — " + (SITE.brand || "GearCraft Auto Works")];
+      var lines = ["Service estimate request — " + (SITE.brand || "Car Garage Auto Service")];
       [["Name", d.get("name")], ["Phone", d.get("phone")], ["Email", d.get("email")],
        ["Make", d.get("make")], ["Model", d.get("model")], ["Year", d.get("year")],
        ["Location", d.get("location")], ["Service", d.get("service")], ["Preferred day", d.get("date")]]
@@ -168,7 +168,7 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var d = new FormData(form);
-      var lines = ["Website enquiry — " + (SITE.brand || "GearCraft Auto Works")];
+      var lines = ["Website enquiry — " + (SITE.brand || "Car Garage Auto Service")];
       [["Name", d.get("name")], ["Phone", d.get("phone")], ["Email", d.get("email")],
        ["Topic", d.get("topic")], ["Vehicle", d.get("vehicle")], ["Preferred time", d.get("time")]]
         .forEach(function (pair) { if (pair[1]) lines.push(pair[0] + ": " + pair[1]); });
