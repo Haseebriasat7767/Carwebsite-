@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Apex Motors — Premium Cars</title>
+<meta name="description" content="Apex Motors — browse, compare and book a test drive for premium new and used cars." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#top">APEX<span>MOTORS</span></a>
+  <nav>
+    <a href="#inventory">Inventory</a>
+    <a href="#why">Why us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Handpicked. Inspected. Guaranteed.</p>
+      <h1>Find the car<br />you actually want.</h1>
+      <p class="lede">Over 200 premium vehicles in stock, every one of them through a 160-point inspection before it reaches the lot.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#inventory">Browse inventory</a>
+        <a class="btn btn-ghost" href="#contact">Book a test drive</a>
+      </div>
+      <dl class="stats">
+        <div><dt>Vehicles in stock</dt><dd>210+</dd></div>
+        <div><dt>Avg. delivery</dt><dd>3 days</dd></div>
+        <div><dt>Warranty</dt><dd>12 months</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="inventory" class="section">
+    <div class="section-head">
+      <h2>Featured inventory</h2>
+      <div class="filters" role="group" aria-label="Filter inventory by body type">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="sedan">Sedan</button>
+        <button class="chip" data-filter="suv">SUV</button>
+        <button class="chip" data-filter="ev">Electric</button>
+      </div>
+    </div>
+    <div class="grid" id="carGrid"></div>
+  </section>
+
+  <section id="why" class="section">
+    <h2>Why Apex</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>160-point inspection</h3>
+        <p>Every vehicle is stripped down, checked and road-tested by our own technicians — not a third party.</p>
+      </article>
+      <article class="card">
+        <h3>Transparent pricing</h3>
+        <p>The price on the listing is the price you pay. No delivery fees, no admin charges, no last-minute extras.</p>
+      </article>
+      <article class="card">
+        <h3>7-day returns</h3>
+        <p>Drive it for a week. If it isn't right, bring it back for a full refund — no questions, no restocking fee.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div>
+      <h2>Book a test drive</h2>
+      <p class="lede">Tell us what you're after and we'll have it ready at the showroom.</p>
+    </div>
+    <form id="leadForm" novalidate>
+      <label>Name<input name="name" type="text" required placeholder="Jane Doe" /></label>
+      <label>Email<input name="email" type="email" required placeholder="jane@example.com" /></label>
+      <label>Vehicle of interest<input name="vehicle" type="text" placeholder="e.g. Model S Plaid" /></label>
+      <button class="btn btn-primary" type="submit">Request a slot</button>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Apex Motors. All rights reserved.</p>
+  <p>Showroom open Mon–Sat, 9:00–18:00</p>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
